@@ -16,8 +16,10 @@ The deck in the photo is made from:
 
 | Part | What was used |
 |---|---|
-| Touch screen | [XIITIA 7 inch IPS touch screen, 1024x600, HDMI, capacitive](https://www.amazon.com/dp/B0C5D6N8NP) |
+| Touch screen | [XIITIA 7 inch IPS touch screen, 1024x600, HDMI, capacitive](https://link.amazon/B08oKAUpY)* |
 | Case | [7" Touch Display Case by armourcraft](https://www.thingiverse.com/thing:4750258) on Thingiverse |
+
+\* Affiliate link: as an Amazon Associate I earn from qualifying purchases.
 
 1. Print the case and fit the screen into it. The case was designed for a Raspberry Pi screen of this size, but TapDeck needs no Pi: the screen plugs straight into your PC.
 2. Connect the screen's HDMI cable to your PC, and its USB cable for touch.
