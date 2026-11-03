@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TapDeck Setup</title>
+<style>
+  body { font: 16px/1.6 system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 16px; color: #1d1d1f; background: #fff; }
+  h1 { font-size: 30px; margin-bottom: 4px; }
+  h2 { font-size: 21px; margin-top: 40px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 0 0 4px; }
+  a { color: #0b5cad; }
+  .muted { color: #666; }
+  .small { font-size: 14px; }
+  figure { margin: 18px 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid #ddd; }
+  figcaption { font-size: 14px; color: #666; margin-top: 6px; }
+  .diagram { width: 100%; height: auto; display: block; }
+  .parts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 16px 0 8px; }
+  .part { border: 1px solid #ddd; border-radius: 10px; padding: 14px 16px; }
+  .part .tag { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: #8a6a1f; font-weight: 600; }
+  .part p { margin: 4px 0 10px; }
+  .button { display: inline-block; padding: 7px 14px; border-radius: 8px; background: #1d1d1f; color: #fff; text-decoration: none; font-size: 15px; }
+  .steps { list-style: none; padding: 0; counter-reset: step; }
+  .steps > li { counter-increment: step; position: relative; padding-left: 46px; margin: 30px 0; }
+  .steps > li::before { content: counter(step); position: absolute; left: 0; top: -2px; width: 32px; height: 32px; border-radius: 50%;
+    background: #f5b82e; color: #1d1d1f; font-weight: 700; display: grid; place-items: center; }
+  .side { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+  .tip { background: #f6f6f7; border-radius: 10px; padding: 10px 14px; font-size: 15px; }
+  kbd { font: 14px ui-monospace, monospace; background: #f1f1f3; border: 1px solid #ddd; border-radius: 4px; padding: 0 5px; }
+  @media (max-width: 560px) { .side { grid-template-columns: 1fr; } .steps > li { padding-left: 40px; } }
+</style>
+</head>
+<body>
+<h1>Setting up TapDeck</h1>
+<p class="muted">What you need, the parts I use, and the first five minutes</p>
+
+<p>TapDeck turns a small touch screen next to your keyboard into a deck of buttons for your PC: shortcuts, apps,
+volume, mute, OBS and live stats, one tap each. Get TapDeck from the Microsoft Store.</p>
+
+<figure>
+  <img src="setup-photo.jpg" alt="A TapDeck on a 7 inch touch screen in a 3D-printed case, showing media keys and live system stats">
+  <figcaption>My deck: a 7 inch touch screen in a 3D-printed case, next to the keyboard.</figcaption>
+</figure>
+
+<h2>What you need</h2>
+<ul>
+  <li>A Windows 10 or 11 PC.</li>
+  <li>A small touch screen. 7 to 10 inches works well. Any touch monitor that Windows sees as a screen will do.</li>
+  <li>Two connections from the screen to the PC: one for the picture, one for touch.</li>
+</ul>
+
+<svg class="diagram" viewBox="0 0 720 220" role="img" aria-label="The PC connects to the touch screen with an HDMI cable for the picture and a USB cable for touch and power">
+  <rect x="20" y="40" width="190" height="140" rx="12" fill="#f6f6f7" stroke="#bbb"/>
+  <text x="115" y="100" text-anchor="middle" font-size="20" font-weight="700" fill="#1d1d1f">Your PC</text>
+  <text x="115" y="126" text-anchor="middle" font-size="14" fill="#666">runs TapDeck</text>
+  <rect x="480" y="40" width="220" height="140" rx="12" fill="#1d1d1f"/>
+  <rect x="494" y="54" width="192" height="112" rx="6" fill="#2a2d3a"/>
+  <g fill="#f5b82e"><rect x="506" y="66" width="50" height="40" rx="6"/><rect x="565" y="66" width="50" height="40" rx="6"/><rect x="624" y="66" width="50" height="40" rx="6"/></g>
+  <g fill="#5b6bd6"><rect x="506" y="114" width="50" height="40" rx="6"/><rect x="565" y="114" width="50" height="40" rx="6"/><rect x="624" y="114" width="50" height="40" rx="6"/></g>
+  <text x="590" y="204" text-anchor="middle" font-size="15" fill="#666">7 inch touch screen</text>
+  <line x1="210" y1="85" x2="480" y2="85" stroke="#0b5cad" stroke-width="5" stroke-linecap="round"/>
+  <text x="345" y="72" text-anchor="middle" font-size="16" font-weight="600" fill="#0b5cad">HDMI: the picture</text>
+  <line x1="210" y1="140" x2="480" y2="140" stroke="#c2410c" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <text x="345" y="165" text-anchor="middle" font-size="16" font-weight="600" fill="#c2410c">USB: touch (and power)</text>
+</svg>
+<p class="small muted">Some screens do both over a single USB-C cable. Both kinds work.</p>
+<p class="tip">No touch screen yet? TapDeck can show the deck in a window on your main screen instead, and a mouse click
+works like a tap. It's a good way to try it first.</p>
+
+<h2>The parts I use</h2>
+<div class="parts">
+  <div class="part">
+    <div class="tag">Touch screen</div>
+    <h3>XIITIA 7 inch touch screen</h3>
+    <p>1024 &times; 600 IPS, HDMI for the picture, USB for touch. Mine needed no extra drivers.</p>
+    <a class="button" href="https://link.amazon/B08oKAUpY">View on Amazon*</a>
+  </div>
+  <div class="part">
+    <div class="tag">Case</div>
+    <h3>7" Touch Display Case by armourcraft</h3>
+    <p>A 3D-printed case for this size of screen. Its feet flip to stand the screen at 15&deg; or 30&deg;.</p>
+    <a class="button" href="https://www.thingiverse.com/thing:4750258">Get it on Thingiverse</a>
+  </div>
+</div>
+<p class="small muted">* Affiliate link: as an Amazon Associate I earn from qualifying purchases.
+These are just what I use. TapDeck works with any touch screen.</p>
+
+<h2>Setting it up</h2>
+<ol class="steps">
+  <li>
+    <h3>Print the case and fit the screen</h3>
+    <p>The case was designed for a Raspberry Pi screen of this size, but you don't need a Pi: the screen plugs straight into
+      your PC. See the Thingiverse page for print settings, screws and the license.</p>
+  </li>
+  <li>
+    <h3>Plug the screen into your PC</h3>
+    <p>Connect HDMI for the picture and USB for touch, as in the picture above. In Windows Settings, under
+      <strong>System &gt; Display</strong>, the touch screen should show up as an extra display. Leave it set to
+      <strong>Extend these displays</strong>.</p>
+    <p class="tip">If tapping the small screen moves the cursor on your main screen, Windows has matched touch to the wrong
+      display. Open <strong>Control Panel</strong>, search for <strong>Calibrate the screen for pen or touch input</strong>,
+      choose <strong>Setup</strong>, and tap the small screen when Windows asks.</p>
+  </li>
+  <li>
+    <h3>Open TapDeck</h3>
+    <p>The deck opens full screen on the touch screen, and the editor opens on your main screen. TapDeck picks the smallest
+      screen that isn't your main one. To choose a different one, open <strong>Settings</strong> in the editor and change
+      <strong>Deck screen</strong>.</p>
+    <figure>
+      <img src="setup-deck-screen.jpg" alt="TapDeck's Settings window with the Deck screen setting highlighted" style="max-width:420px">
+      <figcaption>Settings &gt; Deck screen. "A window on my main screen" is the no-touch-screen option.</figcaption>
+    </figure>
+  </li>
+  <li>
+    <h3>Pick what each key does</h3>
+    <p>In the editor, click an empty key (the one with a +). The right side asks what it should do: open an app, press a
+      shortcut, open a website, control media, change pages, add a slider or a widget, and more.</p>
+    <figure>
+      <img src="setup-editor.jpg" alt="The TapDeck editor with an empty key selected and the list of things a key can do">
+      <figcaption>The editor mirrors your deck. Click a key, then pick from the list on the right.</figcaption>
+    </figure>
+    <div class="side">
+      <p>Most choices then show ready-made keys. Tap one and the key gets its action, picture and name in one go.
+        Change any of them afterwards, or pick <strong>Create your own</strong> to build a key from scratch.</p>
+      <figure style="margin:0">
+        <img src="setup-presets.jpg" alt="Ready-made media keys: play or pause, next track, previous track, stop, volume up and down">
+        <figcaption>Ready-made media keys.</figcaption>
+      </figure>
+    </div>
+  </li>
+  <li>
+    <h3>Tap away</h3>
+    <p>Changes show on the deck straight away. Swipe sideways on the deck to change pages. Give an app its own profile and
+      the deck switches to it whenever that app is in front.</p>
+    <figure>
+      <img src="setup-deck.jpg" alt="A TapDeck page for streaming: go live, record, scenes, mic and Discord mute">
+      <figcaption>A streaming page: scenes, recording, mic and Discord, one tap each.</figcaption>
+    </figure>
+  </li>
+</ol>
+
+<h2>Help</h2>
+<p>Questions or problems: open an issue at
+<a href="https://github.com/CallousCarl/tapdeck-releases/issues">github.com/CallousCarl/tapdeck-releases/issues</a>.
+Read the <a href="privacy.html">privacy policy</a>.</p>
+</body>
+</html>
