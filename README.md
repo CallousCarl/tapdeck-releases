@@ -6,7 +6,7 @@ TapDeck turns a small touch screen next to your keyboard into a deck of buttons 
 
 ## Download
 
-Get **TapDeck-Setup** from the [latest release](https://github.com/CallousCarl/tapdeck-releases/releases/latest) and run it. It installs for your Windows account and keeps itself up to date.
+TapDeck is coming to the Microsoft Store. This page will link to it once it's live.
 
 Needs Windows 10 or 11 and any touch screen that Windows sees as a monitor.
 
@@ -23,7 +23,7 @@ The deck in the photo is made from:
 
 1. Print the case and fit the screen into it. The case was designed for a Raspberry Pi screen of this size, but TapDeck needs no Pi: the screen plugs straight into your PC.
 2. Connect the screen's HDMI cable to your PC, and its USB cable for touch.
-3. Install TapDeck. It opens the deck on the smallest screen that isn't your main one. To pick a different screen, go to **Settings > Deck screen**.
+3. Install TapDeck from the Microsoft Store. It opens the deck on the smallest screen that isn't your main one. To pick a different screen, go to **Settings > Deck screen**.
 
 The case's feet flip to stand the screen at 15° or 30°. See the Thingiverse page for its print settings, hardware and license.
 
